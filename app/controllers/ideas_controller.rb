@@ -5,12 +5,13 @@ class IdeasController < ApplicationController
   # GET /ideas.json
   def index
     @ideas = Idea.all
-    @abc=123
   end
 
   # GET /ideas/1
   # GET /ideas/1.json
   def show
+    @comments = @idea.comments.all.order(like_count: :desc).all
+    @comment = @idea.comments.build
   end
 
   # GET /ideas/new

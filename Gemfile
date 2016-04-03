@@ -11,6 +11,10 @@ group :production do
   gem 'pg'
   gem 'rails_12factor'
 end
+group :production do
+  gem 'pg'
+  gem 'rails_12factor'
+end
 gem 'carrierwave'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'

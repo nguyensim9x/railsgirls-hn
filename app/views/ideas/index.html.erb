@@ -1,8 +1,8 @@
 <p id="notice"><%= notice %></p>
-
+<center>
 <h1>Listing Ideas</h1>
-<h1><%= @abc %></h1>
-<table>
+<br/>
+<table width=1000>
   <thead>
     <tr>
       <th>Name</th>
@@ -15,17 +15,17 @@
   <tbody>
     <% @ideas.each do |idea| %>
       <tr>
-        <td><%= idea.name %></td>
-        <td><%= idea.description %></td>
-        <td><%= idea.picture %></td>
-        <td><%= link_to 'Show', idea %></td>
-        <td><%= link_to 'Edit', edit_idea_path(idea) %></td>
-        <td><%= link_to 'Destroy', idea, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td width=60 height=20><%= idea.name %></td>
+        <td width=100 height=20><%= idea.description %></td>
+        <td width=100 height=20><%= idea.picture %></td>
+        <td width=30 height=20><%= link_to 'Show', idea %></td>
+        <td width=30 height=20><%= link_to 'Edit', edit_idea_path(idea) %></td>
+        <td width=30 height=20><%= link_to 'Destroy', idea, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
-
 <br>
 
 <%= link_to 'New Idea', new_idea_path %>
+</center>
